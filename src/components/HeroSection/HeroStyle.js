@@ -5,7 +5,7 @@ export const HeroContainer = styled.div`
     background: ${_default.colors.background1};
     display: flex;
     justify-content: center;
-    height: 580px;
+    height: 600px;
     position: relative;
     z-index: 1;
     padding: 0 30px;
@@ -14,16 +14,20 @@ export const HeroContainer = styled.div`
 export const HeroBg = styled.div` 
     position: absolute;
     display: flex;
-    justify-content: end ;
-    opacity: 0.5;
+    justify-content: end;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 113%;
+    width: 100%;
     height: 100%;
+    max-width: 1250px;
     overflow: hidden;
     padding: 0 30px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 `;
 
 export const HeroInnerContainer = styled.div`
@@ -47,7 +51,6 @@ export const HeroRightContainer = styled.div`
 `
 
 export const Img = styled.img`
-
     position: relative;
     width: 100%;
     height: 100%;

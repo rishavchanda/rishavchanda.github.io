@@ -6,6 +6,9 @@ const HeroSection = () => {
     return (
         <>
             <HeroContainer>
+            <HeroBg>
+                            <HeroBgAnimation />
+                        </HeroBg>
                 <HeroInnerContainer>
                     <HeroLeftContainer>
                         <Title>Hi, I am <br /> Rishav Chanda</Title>
@@ -14,9 +17,7 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer>
-                        <HeroBg>
-                            <HeroBgAnimation />
-                        </HeroBg>
+                       
                         <Img src={HeroImg} alt="hero-image" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
