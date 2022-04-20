@@ -5,10 +5,16 @@ export const HeroContainer = styled.div`
     background: ${_default.colors.background1};
     display: flex;
     justify-content: center;
-    height: 600px;
     position: relative;
+    padding: 66px 30px;
+    
+    @media (max-width: 960px) {
+        padding: 66px 16px;
+    }
+    @media (max-width: 640) {
+        padding: 32px 16px;
+    }
     z-index: 1;
-    padding: 0 30px;
 `;
 
 export const HeroBg = styled.div` 
@@ -28,6 +34,10 @@ export const HeroBg = styled.div`
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+    
+    @media (max-width: 960px) {
+        justify-content: center;
+    }
 `;
 
 export const HeroInnerContainer = styled.div`
@@ -37,17 +47,45 @@ export const HeroInnerContainer = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1000px;
+
+    @media (max-width: 960px) {
+        flex-direction: column;
+    }
 `
 export const HeroLeftContainer = styled.div`
     width: 100%;
-    position: relative;
+    order: 1;
+    @media (max-width: 960px) {
+        order: 2;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media (max-width: 640px) {
+        order: 2;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const HeroRightContainer = styled.div`
     width: 100%;
     display: flex;
+    order: 2;
     justify-content: end;
-    position: relative;
+    @media (max-width: 960px) {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    
+    @media (max-width: 640px) {
+        margin-bottom: 30px;
+    }
 `
 
 export const Img = styled.img`
@@ -58,6 +96,16 @@ export const Img = styled.img`
     max-height: 400px;
     border-radius: 50%;
     border: 4px solid ${_default.colors.primary1};
+
+    @media (max-width: 768px) {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    @media (max-width: 640px) {
+        max-width: 280px;
+        max-height: 280px;
+    }
 `;
 
 export const Title = styled.div`
@@ -66,6 +114,9 @@ export const Title = styled.div`
     color: ${_default.colors.text};
     line-height: 68px;
     margin-bottom: 32px;
+    @media (max-width: 960px) {
+        text-align: center;
+    } 
 `;
 
 export const SubTitle= styled.div`
@@ -73,10 +124,15 @@ export const SubTitle= styled.div`
     line-height: 36px;
     margin-bottom: 42px;
     color: rgba(255, 255, 255, 0.5);
+    
+    @media (max-width: 960px) {
+        text-align: center;
+    }
 `;
 
 export const ResumeButton= styled.div`
-    width: 50%;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
     padding: 16px 0;
     color: ${_default.colors.text1};
@@ -93,4 +149,5 @@ export const ResumeButton= styled.div`
     width: 55%;
     padding: 18px 0;
     }        
+
 `;
