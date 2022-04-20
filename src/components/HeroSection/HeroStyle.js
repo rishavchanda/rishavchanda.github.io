@@ -36,12 +36,14 @@ export const HeroInnerContainer = styled.div`
 `
 export const HeroLeftContainer = styled.div`
     width: 100%;
+    position: relative;
 `
 
 export const HeroRightContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: end;
+    position: relative;
 `
 
 export const Img = styled.img`
