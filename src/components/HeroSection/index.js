@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroBgAnimation from '../HeroBgAnimation'
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, Title, SubTitle, ResumeButton } from './HeroStyle'
-import HeroImg from '../../images/hero3.jpg'
+import HeroImg from '../../images/HeroImage.jpg'
 const HeroSection = () => {
     return (
         <>
