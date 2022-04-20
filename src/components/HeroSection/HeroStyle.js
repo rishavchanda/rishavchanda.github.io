@@ -37,6 +37,7 @@ export const HeroBg = styled.div`
     
     @media (max-width: 960px) {
         justify-content: center;
+        padding: 0 0px;
     }
 `;
 
@@ -80,6 +81,7 @@ export const HeroRightContainer = styled.div`
     @media (max-width: 960px) {
         order: 1;
         justify-content: center;
+        align-items: center;
         margin-bottom: 80px;
     }
     
@@ -98,8 +100,8 @@ export const Img = styled.img`
     border: 4px solid ${_default.colors.primary1};
 
     @media (max-width: 768px) {
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 400px;
+        max-height: 400px;
     }
     
     @media (max-width: 640px) {
@@ -117,6 +119,10 @@ export const Title = styled.div`
     @media (max-width: 960px) {
         text-align: center;
     } 
+
+    @media (max-width: 640px) {
+        font-size: 44px;
+    } 
 `;
 
 export const SubTitle= styled.div`
@@ -128,10 +134,15 @@ export const SubTitle= styled.div`
     @media (max-width: 960px) {
         text-align: center;
     }
+
+    
+    @media (max-width: 640px) {
+        font-size: 22px;
+    } 
 `;
 
 export const ResumeButton= styled.div`
-    width: 100%;
+    width: 95%;
     max-width: 300px;
     text-align: center;
     padding: 16px 0;
@@ -146,7 +157,8 @@ export const ResumeButton= styled.div`
     -20px -20px 60px #1F2634;
     &:hover {
     font-size: 22px;
-    width: 55%;
+    width: 100%;
+    max-width: 320px;
     padding: 18px 0;
     }        
 

@@ -36,6 +36,9 @@ export const NavLogo = styled(LinkR)`
     justify-content: start;
     align-items: center;
     text-decoration: none;
+    @media (max-width: 640px) {
+      padding: 0 0px;
+  }
 `;
 export const Span = styled.div`
     padding: 0 4px;
