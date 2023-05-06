@@ -153,7 +153,7 @@ export const ResumeButton= styled.div`
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.2s ease-in-out !important;
     background: linear-gradient(145deg, #854CE6, #B67AFF);
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;

@@ -13,6 +13,8 @@ function App() {
     <Router >
       <Navbar/>
       <HeroSection/>
+      <Projects/>
+      <Footer/>
     </Router>
   );
 }

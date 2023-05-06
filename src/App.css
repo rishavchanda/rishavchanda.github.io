@@ -6,6 +6,11 @@
     
 }
 
+body{
+  margin: 0px !important;
+  padding: 0;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
