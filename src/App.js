@@ -1,3 +1,6 @@
+import { ThemeProvider } from "styled-components";
+import { useState, useEffect } from "react";
+import { darkTheme, lightTheme } from './utils/Themes.js'
 import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -9,13 +12,17 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <Router >
-      <Navbar/>
-      <HeroSection/>
-      <Projects/>
-      <Footer/>
-    </Router>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Router >
+        <Navbar />
+        <HeroSection />
+        <Skills/>
+        <Projects />
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

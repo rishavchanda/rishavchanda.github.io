@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav, NavLink, NavbarContainer,Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
 import {FaBars} from 'react-icons/fa';
+import { Bio } from '../../data/constants';
 
 const Navbar = () => {
   return (
@@ -17,13 +18,13 @@ const Navbar = () => {
             <FaBars/>
           </MobileIcon>
           <NavItems>
-            <NavLink to='about'>About</NavLink>
-            <NavLink to='skills'>Skills</NavLink>
-            <NavLink to='projects'>Projects</NavLink>
-            <NavLink to='contact'>Contact</NavLink>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href='#skills'>Skills</NavLink>
+            <NavLink href='#projects'>Projects</NavLink>
+            <NavLink href='#contact'>Contact</NavLink>
           </NavItems>
           <ButtonContainer>
-            <GitHubButton href="https://github.com/rishavchanda" target="_blank">Github Profile</GitHubButton>
+            <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
           </ButtonContainer>
 
         </NavbarContainer>

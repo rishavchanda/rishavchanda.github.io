@@ -4,8 +4,8 @@ import _default from '../../themes/default';
 import { Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.nav`
-    background: ${_default.colors.background1};
-    height: 60px;
+    background: ${({theme}) => theme.bg};
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
+  max-width: 1200px;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -49,7 +49,8 @@ export const NavItems = styled.ul`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
+    gap: 32px;
     padding: 0 6px;
     list-style: none;
 
@@ -58,40 +59,39 @@ export const NavItems = styled.ul`
     }
 `;
 
-export const NavLink = styled(LinkS)`
-    color: ${_default.colors.text};
+export const NavLink = styled.a`
+    color: ${({theme}) => theme.text_primary};
     font-weight: 500;
-    padding: 0 12px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
     :hover {
-      font-size: 18px;
-      color: ${_default.colors.primary1};
+      color: ${({theme}) => theme.primary};
     }
 
     &.active {
-      border-bottom: 2px solid ${_default.colors.primary1};
+      border-bottom: 2px solid ${({theme}) => theme.primary};
     }
 `;
 
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid ${_default.colors.primary1};
+  border: 1.8px solid ${({theme}) => theme.primary};
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${_default.colors.primary1};
+  color: ${({theme}) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
     :hover {
-      background: ${_default.colors.primary1};
-      color: ${_default.colors.text};      
+      background: ${({theme}) => theme.primary};
+      color: ${({theme}) => theme.white};     
     }
 `;
 
@@ -118,7 +118,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${_default.colors.text};
+    color: ${({theme}) => theme.primary};
   }
 `
 

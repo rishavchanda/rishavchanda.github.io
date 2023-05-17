@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const HeroContainer = styled.div`
-    background: ${_default.colors.background1};
+    background: ${({theme}) => theme.bg};
     display: flex;
     justify-content: center;
     position: relative;
@@ -27,7 +27,7 @@ export const HeroBg = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    max-width: 1250px;
+    max-width: 1360px;
     overflow: hidden;
     padding: 0 30px;
     top: 50%;
@@ -47,7 +47,7 @@ export const HeroInnerContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
 
     @media (max-width: 960px) {
         flex-direction: column;
@@ -78,6 +78,7 @@ export const HeroRightContainer = styled.div`
     display: flex;
     order: 2;
     justify-content: end;
+    gap: 12px;
     @media (max-width: 960px) {
         order: 1;
         justify-content: center;
@@ -97,7 +98,7 @@ export const Img = styled.img`
     max-width: 400px;
     max-height: 400px;
     border-radius: 50%;
-    border: 4px solid ${_default.colors.primary1};
+    border: 2px solid ${({theme}) => theme.primary};
 
     @media (max-width: 768px) {
         max-width: 400px;
@@ -111,27 +112,49 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.div`
-    font-weight: 800;
-    font-size: 48px;
-    color: ${_default.colors.text};
+    font-weight: 700;
+    font-size: 50px;
+    color: ${({theme}) => theme.text_primary};
     line-height: 68px;
-    margin-bottom: 32px;
     @media (max-width: 960px) {
         text-align: center;
     } 
 
     @media (max-width: 640px) {
-        font-size: 44px;
-        line-height: 60px;
-        margin-bottom: 28px;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 8px;
     } 
 `;
 
-export const SubTitle= styled.div`
-    font-size: 24px;
-    line-height: 36px;
+export const TextLoop = styled.div`
+    font-weight: 600;
+    font-size: 32px;
+    display: flex;
+    gap: 12px;
+    color: ${({theme}) => theme.text_primary};
+    line-height: 68px;
+    @media (max-width: 960px) {
+        text-align: center;
+    }
+    @media (max-width: 640px) {
+        font-size: 22px;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+
+    `;
+
+export const Span = styled.span`
+    color: ${({theme}) => theme.primary};
+    cursor: pointer;
+`;
+
+export const SubTitle = styled.div`
+    font-size: 20px;
+    line-height: 34px;
     margin-bottom: 42px;
-    color: rgba(255, 255, 255, 0.5);
+    color: ${({theme}) => theme.text_primary+95};
     
     @media (max-width: 960px) {
         text-align: center;
@@ -139,17 +162,22 @@ export const SubTitle= styled.div`
 
     
     @media (max-width: 640px) {
-        font-size: 22px;
+        font-size: 16px;
+        line-height: 32px;
     } 
 `;
 
-export const ResumeButton= styled.div`
+export const ResumeButton = styled.a`
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
     width: 95%;
     max-width: 300px;
     text-align: center;
     padding: 16px 0;
-    color: ${_default.colors.text1};
-    border-radius: 50px;
+    color:${({theme}) => theme.white};
+    border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
@@ -158,10 +186,15 @@ export const ResumeButton= styled.div`
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
     &:hover {
-    font-size: 22px;
-    width: 100%;
-    max-width: 320px;
-    padding: 18px 0;
-    }        
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.3);
+  filter: brightness(1.3);
+    }    
+    
+    
+    @media (max-width: 640px) {
+        padding: 12px 0;
+        font-size: 18px;
+    } 
 
 `;
