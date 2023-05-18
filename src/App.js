@@ -11,6 +11,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
+import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -26,6 +27,8 @@ const Wrapper = styled.div`
 `
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
+  console.log(openModal)
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
@@ -36,8 +39,11 @@ function App() {
             <Skills />
             <Experience />
           </Wrapper>
-          <Projects />
+          <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Footer />
+          {openModal.state &&
+            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+          }
         </Body>
       </Router>
     </ThemeProvider>

@@ -65,8 +65,8 @@ const Card = styled.div`
 
     }
 
-    border: 1px solid ${({ theme }) => theme.primary + 90};
-    box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.primary + 10};
+    border: 0.1px solid #306EE8;
+    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
 const Top = styled.div`

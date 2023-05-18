@@ -5,7 +5,7 @@ import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 
 
-const Projects = () => {
+const Projects = ({openModal,setOpenModal}) => {
   const [toggle, setToggle] = useState('all');
   return (
     <Container id="projects">
@@ -42,12 +42,12 @@ const Projects = () => {
         <CardContainer>
           {toggle === 'all' && projects
             .map((project) => (
-              <ProjectCard project={project} />
+              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
             ))}
           {projects
             .filter((item) => item.category == toggle)
             .map((project) => (
-              <ProjectCard project={project} />
+              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
             ))}
         </CardContainer>
       </Wrapper>

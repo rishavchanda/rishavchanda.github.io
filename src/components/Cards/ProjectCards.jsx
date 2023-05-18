@@ -19,6 +19,7 @@ const Card = styled.div`
     width: 330px;
     height: 490px;
     background-color: ${({ theme }) => theme.card};
+    cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
@@ -108,11 +109,9 @@ const Avatar = styled.img`
     border: 3px solid ${({ theme }) => theme.card};
 `
 
-
-
-const ProjectCards = ({project}) => {
+const ProjectCards = ({project,setOpenModal}) => {
     return (
-        <Card>
+        <Card onClick={() => setOpenModal({state: true, project: project})}>
             <Image src={project.image}/>
             <Tags>
                 {project.tags?.map((tag, index) => (
