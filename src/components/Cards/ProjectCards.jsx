@@ -17,9 +17,10 @@ const Button = styled.button`
 `
 const Card = styled.div`
     width: 330px;
+    height: 490px;
     background-color: ${({ theme }) => theme.card};
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
@@ -28,7 +29,7 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
     }
     &:hover ${Button} {
@@ -54,7 +55,7 @@ const Tags = styled.div`
 `
 
 const Tag = styled.span`
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 400;
     color: ${({ theme }) => theme.primary};
     background-color: ${({ theme }) => theme.primary + 15};

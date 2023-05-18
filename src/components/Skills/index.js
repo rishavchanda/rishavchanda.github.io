@@ -33,8 +33,8 @@ font-weight: 600;
 margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 36px;
+margin-top: 12px;
+      font-size: 32px;
   }
 `;
 
@@ -44,8 +44,7 @@ export const Desc = styled.div`
     max-width: 600px;
     color: ${({ theme }) => theme.text_secondary};
     @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 18px;
+        font-size: 16px;
     }
 `;
 
@@ -53,8 +52,8 @@ const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 26px;
-  gap: 16px;
+  margin-top: 30px;
+  gap: 30px;
   justify-content: center;
 `
 
@@ -66,7 +65,6 @@ const Skill = styled.div`
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -127,7 +125,8 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are some of my skills</Desc>
+        <Desc>Here are some of my skills on which I have been working on for the past 2 years.
+        </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
             <Skill>
