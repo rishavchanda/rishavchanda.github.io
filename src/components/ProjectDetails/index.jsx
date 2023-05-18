@@ -1,4 +1,4 @@
-import { CloseRounded } from '@mui/icons-material';
+import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
 import { Modal } from '@mui/material';
 import React from 'react'
 import styled from 'styled-components'
@@ -127,6 +127,7 @@ const MemberImage = styled.img`
 const MemberName = styled.div`
     font-size: 16px;
     font-weight: 500;
+    width: 200px;
     color: ${({ theme }) => theme.text_primary};
     @media only screen and (max-width: 600px) {
         font-size: 14px;
@@ -194,15 +195,21 @@ const index = ({ openModal, setOpenModal }) => {
                     <Desc>{project?.description}</Desc>
                     {project.member && (
                         <>
-                        <Label>Members</Label>
-                        <Members>
-                            {project?.member.map((member) => (
-                                <Member>
-                                    <MemberImage src={member.img} />
-                                    <MemberName>{member.name}</MemberName>
-                                </Member>
-                            ))}
-                        </Members>
+                            <Label>Members</Label>
+                            <Members>
+                                {project?.member.map((member) => (
+                                    <Member>
+                                        <MemberImage src={member.img} />
+                                        <MemberName>{member.name}</MemberName>
+                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                            <GitHub />
+                                        </a>
+                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                            <LinkedIn />
+                                        </a>
+                                    </Member>
+                                ))}
+                            </Members>
                         </>
                     )}
                     <ButtonGroup>
