@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const Container = styled.div`
-    background: ${({ theme }) => theme.bg};
+    background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     max-width: 1350px;
-    padding: 80px 0;
+    padding: 10px 0px 80px 0;
     gap: 12px;
     @media (max-width: 960px) {
         flex-direction: column;

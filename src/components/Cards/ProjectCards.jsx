@@ -42,7 +42,7 @@ const Image = styled.img`
     height: 180px;
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
-    box-shadow: 0 0 10px ${({ theme }) => theme.primary + 30};
+    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
 `
 
 const Tags = styled.div`
@@ -59,7 +59,7 @@ const Tag = styled.span`
     font-weight: 400;
     color: ${({ theme }) => theme.primary};
     background-color: ${({ theme }) => theme.primary + 15};
-    padding: 5px 8px;
+    padding: 2px 8px;
     border-radius: 10px;
 `
 

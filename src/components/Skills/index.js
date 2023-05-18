@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { skills } from '../../data/constants'
 
 const Container = styled.div`
-background: ${({ theme }) => theme.bg};
 display: flex;
 flex-direction: column;
 justify-content: center;

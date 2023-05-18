@@ -149,6 +149,28 @@ export const skills = [
   },
 ]
 
+export const experiences = [
+  {
+    id: 0,
+    img: 'https://media.licdn.com/dms/image/D4D0BAQGfGQHEJt8gPA/company-logo_100_100/0/1666002815185?e=1692230400&v=beta&t=c4obZda4Uh9q6vOcmCbxjoSiExvbvYwEHUlgdY0tU-4',
+    role: 'Android Developer',
+    company: 'DSC KIIT',
+    date: 'Nov-2021 - Present',
+    desc: "As an Android developer at the Google Developers Student Club (GDCS), I have had the opportunity to work on exciting projects and collaborate with talented developers who share my passion for technology. Through my involvement with GDCS, I have also had the opportunity to host and participate in numerous events, including hackathons, study jams, and workshops.",
+    skills: ['Leadership', 'Mobile Application Development', 'Kotlin', 'XML', 'Figma'],
+  },
+  {
+    id: 1,
+    img: 'https://media.licdn.com/dms/image/C4D0BAQH4od9HG2K7bw/company-logo_100_100/0/1661484397513?e=1692230400&v=beta&t=IW-eebE0PpFxqZ8Q3UCYYtlAokbhAEqsNePBv2Pmg18',
+    role: 'Android Developer Intern',
+    company: 'Rudraksha Welffare Foundation',
+    date: 'June 2021 - Oct2021',
+    desc: "As an Android Developer Intern at Rudraksha Welfare Foundation from June 2021 to October 2021, I gained valuable hands-on experience in application development. During my tenure, I contributed to the development of the application's back-end cloud functions using Firebase and implemented a front-end with the MVVM structure, which was designed using Figma. I also added a one-to-one video call feature, conceptualized new features, and optimized app performance. This internship helped me enhance my skills in Android development and gave me an opportunity to work in a collaborative team environment.",
+    skills: ['Android', 'Java', 'Kotlin', 'XML', 'Node Js', 'Cloud Firestore', 'Firebase', 'Figma'],
+    doc: "https://media.licdn.com/dms/image/D4D2DAQFFISCs82JlBQ/profile-treasury-image-shrink_800_800/0/1683229076901?e=1685012400&v=beta&t=4bTyroUwL7-ltIChs0mwTP2BWROxcw2WXhVYSex_bwY",
+  }
+]
+
 export const projects = [
     {
       id: 0,

@@ -7,10 +7,10 @@ import { Bio } from '../../data/constants';
 
 const FooterContainer = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.bg};
   padding: 2rem 0;
   display: flex;
   justify-content: center;
+  background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.05) 42.33%, rgba(150, 0, 225, 0.05) 127.07%);
 `;
 
 
@@ -56,6 +56,9 @@ color: ${({ theme }) => theme.text_primary};
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const SocialMediaIcons = styled.div`
@@ -89,6 +92,7 @@ function Footer() {
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
+          <NavLink href="#experience">Experience</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#contact">Contact</NavLink>
         </Nav>

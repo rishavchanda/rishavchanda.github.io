@@ -1,10 +1,9 @@
-import { Link as LinkR} from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 import _default from '../../themes/default';
-import { Link as LinkS} from 'react-scroll';
 
-export const Nav = styled.nav`
-    background: ${({theme}) => theme.bg};
+export const Nav = styled.div`
+    background-color: ${({theme}) => theme.card_light};
     height: 80px;
     display: flex;
     align-items: center;
@@ -13,7 +12,6 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10;
-
     @media (max-width: 960px) {
         trastion: 0.8s all ease;
     }
@@ -60,29 +58,29 @@ export const NavItems = styled.ul`
 `;
 
 export const NavLink = styled.a`
-    color: ${({theme}) => theme.text_primary};
+    color: ${({ theme }) => theme.text_primary};
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     :hover {
-      color: ${({theme}) => theme.primary};
+      color: ${({ theme }) => theme.primary};
     }
 
     &.active {
-      border-bottom: 2px solid ${({theme}) => theme.primary};
+      border-bottom: 2px solid ${({ theme }) => theme.primary};
     }
 `;
 
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid ${({theme}) => theme.primary};
+  border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({theme}) => theme.primary};
+  color: ${({ theme }) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -90,8 +88,11 @@ export const GitHubButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
     :hover {
-      background: ${({theme}) => theme.primary};
-      color: ${({theme}) => theme.white};     
+      background: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.white};     
+    }
+    @media screen and (max-width: 768px) { 
+    font-size: 14px;
     }
 `;
 
@@ -118,7 +119,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({theme}) => theme.primary};
+    color: ${({ theme }) => theme.primary};
   }
 `
 
