@@ -68,7 +68,7 @@ const Details = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0px;
     padding: 0px 2px;
 `
 const Title = styled.div`
@@ -83,10 +83,23 @@ const Title = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
 `
+
+const Date = styled.div`
+    font-size: 12px;
+    margin-left: 2px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_secondary + 80};
+    @media only screen and (max-width: 768px){
+        font-size: 10px;
+    }
+`
+
+
 const Description = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.text_secondary + 99};
     overflow: hidden;
+    margin-top: 8px;
     display: -webkit-box;
     max-width: 100%;
     -webkit-line-clamp: 3;
@@ -120,6 +133,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Tags>
             <Details>
                 <Title>{project.title}</Title>
+                <Date>{project.date}</Date>
                 <Description>{project.description}</Description>
             </Details>
             <Members>

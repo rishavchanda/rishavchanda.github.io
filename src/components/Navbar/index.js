@@ -4,9 +4,11 @@ import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
+import { useTheme } from 'styled-components';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const theme = useTheme()
   return (
     <Nav>
       <NavbarContainer>
@@ -48,6 +50,7 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>

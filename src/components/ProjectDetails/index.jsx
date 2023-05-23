@@ -35,12 +35,24 @@ const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px;
+  margin: 8px 6px 0px 6px;
   @media only screen and (max-width: 600px) {
       font-size: 24px;
-      margin: 6px 6px;
+      margin: 6px 6px 0px 6px;
   }
 `;
+
+const Date = styled.div`
+    font-size: 16px;
+    margin: 2px 6px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_secondary};
+    @media only screen and (max-width: 768px){
+        font-size: 12px;
+    }
+`
+
+
 
 const Desc = styled.div`
     font-size: 16px;
@@ -49,7 +61,7 @@ const Desc = styled.div`
     margin: 8px 6px;
     @media only screen and (max-width: 600px) {
         font-size: 14px;
-        margin: 4px 6px;
+        margin: 6px 6px;
     }
 `;
 
@@ -187,6 +199,7 @@ const index = ({ openModal, setOpenModal }) => {
                     />
                     <Image src={project?.image} />
                     <Title>{project?.title}</Title>
+                    <Date>{project.date}</Date>
                     <Tags>
                         {project?.tags.map((tag) => (
                             <Tag>{tag}</Tag>
