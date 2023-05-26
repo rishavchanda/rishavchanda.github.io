@@ -152,15 +152,24 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
+    img: 'https://media.licdn.com/dms/image/C560BAQFQb9_Lb3bZug/company-logo_200_200/0/1644414857251?e=1693440000&v=beta&t=7WqhIiUCg_0otFDwWn-O_SP-Z4Ftoe4be1WlnjYoESc',
+    role: 'Frontend Engineer Intern',
+    company: 'Neurobit',
+    date: 'June 2023 - Present',
+    desc: 'Working on the frontend of the web application using ReactJS, Redux, and Material UI.',
+    skills: ['ReactJS', 'Redux', 'NodeJs', 'Material UI', 'HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    id: 1,
     img: 'https://media.licdn.com/dms/image/C510BAQGSObrO0QPlMQ/company-logo_200_200/0/1555704980721?e=1692835200&v=beta&t=FjOWcUVVNzqFbTmmp0iXQkv5keBQC5lxIQ7K6rmMSMQ',
     role: 'Open Source Contributor ',
     company: 'GirlScript Summer of Code',
-    date: 'May 2021 - Present',
+    date: 'May 2023 - Present',
     desc: 'Contributing to different open-source projects and learn from industry experts',
     doc: 'https://media.licdn.com/dms/image/D4D22AQGzSpgFaR4hsQ/feedshare-shrink_800/0/1684079632872?e=1687996800&v=beta&t=i0xWn_k32Oj9SxKfc6rARSbOghXD9Ge6WyEb2p2vvrc'
   },
   {
-    id: 1,
+    id: 2,
     img: 'https://media.licdn.com/dms/image/D4D0BAQGfGQHEJt8gPA/company-logo_100_100/0/1666002815185?e=1692230400&v=beta&t=c4obZda4Uh9q6vOcmCbxjoSiExvbvYwEHUlgdY0tU-4',
     role: 'Android Developer',
     company: 'DSC KIIT',
@@ -169,7 +178,7 @@ export const experiences = [
     skills: ['Leadership', 'Mobile Application Development', 'Kotlin', 'XML', 'Figma'],
   },
   {
-    id: 2,
+    id: 3,
     img: 'https://media.licdn.com/dms/image/C4D0BAQH4od9HG2K7bw/company-logo_100_100/0/1661484397513?e=1692230400&v=beta&t=IW-eebE0PpFxqZ8Q3UCYYtlAokbhAEqsNePBv2Pmg18',
     role: 'Android Developer Intern',
     company: 'Rudraksha Welffare Foundation',
