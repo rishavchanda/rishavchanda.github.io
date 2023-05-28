@@ -158,6 +158,7 @@ export const experiences = [
     date: 'June 2023 - Present',
     desc: 'Working on the frontend of the web application using ReactJS, Redux, and Material UI.',
     skills: ['ReactJS', 'Redux', 'NodeJs', 'Material UI', 'HTML', 'CSS', 'JavaScript'],
+    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
   },
   {
     id: 1,
@@ -185,7 +186,7 @@ export const experiences = [
     date: 'June 2021 - Oct 2021',
     desc: "As an Android Developer Intern at Rudraksha Welfare Foundation from June 2021 to October 2021, I gained valuable hands-on experience in application development. During my tenure, I contributed to the development of the application's back-end cloud functions using Firebase and implemented a front-end with the MVVM structure, which was designed using Figma. I also added a one-to-one video call feature, conceptualized new features, and optimized app performance. This internship helped me enhance my skills in Android development and gave me an opportunity to work in a collaborative team environment.",
     skills: ['Android', 'Java', 'Kotlin', 'XML', 'Node Js', 'Cloud Firestore', 'Firebase', 'Figma'],
-    doc: "https://media.licdn.com/dms/image/D4D2DAQFFISCs82JlBQ/profile-treasury-image-shrink_800_800/0/1683229076901?e=1685012400&v=beta&t=4bTyroUwL7-ltIChs0mwTP2BWROxcw2WXhVYSex_bwY",
+    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
   }
 ]
 
