@@ -183,6 +183,27 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
+    img: "https://media.licdn.com/dms/image/D560BAQFDUKPSU8P0Lw/company-logo_200_200/0/1687947132305?e=1698278400&v=beta&t=cBF3SdszRLspmyvV-rHa1y4tdj_hjjivH7Xy0Z7kOD8",
+    role: "DevOps & Fullstack Engineering Intern",
+    company: "Flipr Inovations Pvt. Ltd.",
+    date: "Aug 2023 - July 2023",
+    desc: "Working on Flipr Platforms, managing DevOps, and streamlining the process with automation.",
+    skills: [
+      "Docker",
+      "Terraform",
+      "AWS",
+      "EC2",
+      "Portainer",
+      "Nginx",
+      "JavaScript",
+      "TypeScript",
+      "Node Js",
+      " Next Js",
+    ],
+    doc: "https://media.licdn.com/dms/image/D4D2DAQFlp60ZqHuaFQ/profile-treasury-image-shrink_1280_1280/0/1691180828512?e=1692381600&v=beta&t=mM5Y_NE5EPlQhez5FAN6NLVSKcO_Ojt_9Gq3mnFGkAQ",
+  },
+  {
+    id: 0,
     img: "https://media.licdn.com/dms/image/C560BAQFQb9_Lb3bZug/company-logo_200_200/0/1644414857251?e=1693440000&v=beta&t=7WqhIiUCg_0otFDwWn-O_SP-Z4Ftoe4be1WlnjYoESc",
     role: "Frontend Engineer Intern",
     company: "Neurobit",
