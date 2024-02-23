@@ -16,6 +16,10 @@ const Nav = styled.div`
   z-index: 10;
   color: white;
 `;
+const ColorText = styled.div`
+  color: ${({ theme }) => theme.primary};
+  font-size: 32px;
+`;
 
 const NavbarContainer = styled.div`
   width: 100%;
@@ -27,6 +31,8 @@ const NavbarContainer = styled.div`
   font-size: 1rem;
 `;
 const NavLogo = styled(LinkR)`
+  display: flex;
+  align-items: center;
   width: 80%;
   padding: 0 6px;
   font-weight: 500;
@@ -132,7 +138,11 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">GeeksForGeeks</NavLogo>
+        <NavLogo to="/">
+          <ColorText>&lt;</ColorText>Rishav
+          <div style={{ color: theme.primary }}>/</div>Chanda
+          <ColorText>&gt;</ColorText>
+        </NavLogo>
 
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
