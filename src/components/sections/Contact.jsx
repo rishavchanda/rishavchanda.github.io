@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
+import { Snackbar } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
@@ -126,47 +127,89 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
-  const form = useRef();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
-        form.current,
-        "SybVGsYS52j2TfLbi"
-      )
-      .then(
-        (result) => {
-          alert("Message Sent");
-          form.current.resut();
-        },
-        (error) => {
-          alert(error);
-        }
-      );
-  };
-
+    const [open, setOpen] = useState(false);
+    const formRef = useRef();
+    const [error, setError] = useState("");
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (validateForm()) {
+        emailjs.sendForm("service_tox7kqs","template_nv7k7mj",form.current,"SybVGsYS52j2TfLbi")
+          .then(
+            (result) => {
+              setOpen(true);
+              formRef.current.reset();
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      }
+    };
+  
+    const validateForm = () => {
+      const formData = new FormData(formRef.current);
+      const email = formData.get("from_email");
+      const name = formData.get("from_name");
+      const subject = formData.get("subject");
+      const message = formData.get("message");
+  
+      if (!email || !name || !subject || !message) {
+        setError("Please fill out all fields.");
+        return false;
+      }
+  
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        setError("Please enter a valid email address.");
+        return false;
+      }
+  
+      if (name.trim().length < 3) {
+        setError("Name must be at least 3 characters long.");
+        return false;
+      }
+  
+      if (message.trim().length < 5) {
+        setError("Message must be at least 5 characters long.");
+        return false;
+      }
+  
+      setError("");
+      return true;
+    };
+  
   return (
     <Container>
       <Wrapper>
         <EarthCanvas />
         <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
-        <ContactForm onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-      </Wrapper>
-    </Container>
-  );
-};
+          <Desc>
+            Feel free to reach out to me for any questions or opportunities!
+          </Desc>
+          <ContactForm ref={formRef} onSubmit={handleSubmit}>
+            <ContactTitle>Email Me 🚀</ContactTitle>
+            <ContactInput placeholder="Your Email" name="from_email" />
+            <ContactInput placeholder="Your Name" name="from_name" />
+            <ContactInput placeholder="Subject" name="subject" />
+            <ContactInputMessage
+              placeholder="Message"
+              rows="4"
+              name="message"
+            />
+            <ContactButton type="submit" value="Send" />
+            {error && <p style={{ color: 'white' }}>{error}</p>}
+          </ContactForm>
+          <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={() => setOpen(false)}
+            message="Email sent successfully!"
+            severity="success"
+          />
+        </Wrapper>
+      </Container>
+    );
+  };
 
 export default Contact;
